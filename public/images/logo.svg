@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <linearGradient id="bkdGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0D495"/>
+      <stop offset="50%" stop-color="#C9A15D"/>
+      <stop offset="100%" stop-color="#B38A58"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Architectural Skyscraper Towers Logo Mark -->
+  <g transform="translate(250, 105)" text-anchor="middle" filter="url(#glow)">
+    <!-- Left Tower Outer -->
+    <path d="M-60,50 L-60,-25 L-45,-40 L-45,50 Z" fill="url(#bkdGold)" opacity="0.85"/>
+    <!-- Left Mid Tower -->
+    <path d="M-40,50 L-40,-55 L-25,-70 L-25,50 Z" fill="url(#bkdGold)"/>
+    <!-- Center Main Tower (Tallest) -->
+    <path d="M-20,50 L-20,-95 L0,-115 L0,50 Z" fill="url(#bkdGold)"/>
+    <!-- Right Main Tower -->
+    <path d="M5,50 L5,-115 L25,-95 L25,50 Z" fill="url(#bkdGold)"/>
+    <!-- Right Mid Tower -->
+    <path d="M30,50 L30,-70 L45,-55 L45,50 Z" fill="url(#bkdGold)"/>
+    <!-- Right Outer Tower -->
+    <path d="M50,50 L50,-40 L65,-25 L65,50 Z" fill="url(#bkdGold)" opacity="0.85"/>
+  </g>
+
+  <!-- BKD Main Brand Title -->
+  <text x="250" y="240" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="96" font-weight="700" letter-spacing="8" fill="url(#bkdGold)">BKD</text>
+
+  <!-- BKD Contracting Full Title -->
+  <text x="250" y="295" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" letter-spacing="3" fill="#D9C7B1">BKD Contracting</text>
+
+  <!-- Decorative Accent Line -->
+  <path d="M190,320 L240,320 L250,325 L260,320 L310,320" stroke="url(#bkdGold)" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Subtitle Tagline -->
+  <text x="250" y="355" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="13" font-weight="500" letter-spacing="6" fill="#8B6E58">DUBAI • QUALITY • INTEGRITY</text>
+</svg>
