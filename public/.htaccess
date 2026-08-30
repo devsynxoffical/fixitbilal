@@ -1,13 +1,18 @@
+# SPA fallback for LiteSpeed / Apache (cPanel)
+# Serves index.html for client-side routes so refresh does not 404.
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  Options -MultiViews
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /index.html [L]
+
+  # Existing files and directories are served as-is
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Everything else → React app
+  RewriteRule ^ index.html [L]
 </IfModule>
 
-# Fallback in case mod_rewrite is not enabled by the hosting provider
+# Soft fallback if rewrite is disabled on the host
 ErrorDocument 404 /index.html

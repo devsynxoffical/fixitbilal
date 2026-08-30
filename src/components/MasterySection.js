@@ -28,9 +28,9 @@ const galleryItems = [
   },
   {
     id: 4,
-    title: 'Bespoke Joinery & Marble Suite',
+    title: 'Marble Ensuite & City View Suite',
     category: 'Custom Fit-out',
-    image: '/images/IMG-20250805-WA0121.jpg',
+    image: '/images/portfolio-extra-1.jpg',
     location: 'DIFC, Dubai',
     span: 'normal',
   },
