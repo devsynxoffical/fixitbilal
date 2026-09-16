@@ -77,7 +77,7 @@ export default function HomePage() {
             marginBottom: '32px',
             textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)',
           }}>
-            Delivering Lasting Value.
+            Delivering Lasting Value
           </h2>
 
           {/* Description Paragraph */}
