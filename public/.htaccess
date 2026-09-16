@@ -1,4 +1,4 @@
-# SPA fallback for LiteSpeed / Apache (cPanel)
+# SPA fallback for LiteSpeed / Apache (cPanel / Bluehost)
 # Serves index.html for client-side routes so refresh does not 404.
 
 <IfModule mod_rewrite.c>
@@ -12,6 +12,20 @@
 
   # Everything else → React app
   RewriteRule ^ index.html [L]
+</IfModule>
+
+# Prevent caching of index.html so updates are always live immediately
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
+  # Cache static assets with unique hashes
+  <FilesMatch "\.(js|css|webp|png|jpg|jpeg|svg|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
 </IfModule>
 
 # Soft fallback if rewrite is disabled on the host
