@@ -33,7 +33,7 @@ export default function Preloader({ onDone }) {
   return (
     <div className={`preloader bg-[#FAFAFA] text-[#1C120E] ${done ? 'done' : ''}`}>
       <div className="loader-mark !bg-white shadow-[0_10px_40px_rgba(201,161,93,0.3)] border border-[#C9A15D]/30 !rounded-2xl overflow-hidden p-2">
-        <img src="/images/bkd-logo.png" alt="BKD Contracting Logo" className="w-16 h-16 object-contain scale-110" />
+        <img src="/images/bkd-logo.webp" alt="BKD Contracting Logo" className="w-16 h-16 object-contain scale-110" />
       </div>
       <div className="loader-bar !bg-[#1C120E]/10 mt-8">
         <span style={{ width: `${progress}%` }} className="!bg-gradient-to-r !from-[#F0D495] !to-[#C9A15D]" />

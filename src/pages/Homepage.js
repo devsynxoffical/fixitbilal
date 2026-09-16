@@ -31,7 +31,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: '#0C0A08' }}>
         {/* Background Image */}
         <img
-          src="/hero.png"
+          src="/hero.webp"
           alt="BKD Contracting Hero Background"
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"

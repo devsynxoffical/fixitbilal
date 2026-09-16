@@ -36,7 +36,7 @@ export default function AboutPage() {
       <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#0C0A08]">
         {/* Background Image */}
         <img
-          src="/about-hero.png"
+          src="/about-hero.webp"
           alt="About BKD Contracting Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -134,7 +134,7 @@ export default function AboutPage() {
                   <div className="absolute -bottom-8 -right-6 w-52 h-52 rounded-2xl border-2 border-[#C9A15D]/40 -z-10" />
                   <div className="img-zoom rounded-3xl shadow-xl overflow-hidden border border-[#C9A15D]/30">
                     <SmartImage
-                      src="/images/about-story.jpg"
+                      src="/images/about-story.webp"
                       alt="BKD Contracting team"
                       className="w-full h-[420px] md:h-[520px] object-cover"
                     />

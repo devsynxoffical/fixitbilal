@@ -43,7 +43,7 @@ export default function PortfolioPage() {
       <section className="min-h-[75vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#0C0A08]">
         {/* Background Image */}
         <img
-          src="/portfolio-hero.jpg"
+          src="/portfolio-hero.webp"
           alt="BKD Interiors Portfolio Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />

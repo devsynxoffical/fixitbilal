@@ -2,17 +2,17 @@ import { useState, useEffect } from 'react';
 
 const spaceSlides = [
   {
-    image: '/images/spacesec1.jpeg',
+    image: '/images/spacesec1.webp',
     tag: 'Bespoke Balconies & Decks',
     title: 'Luxury Balcony Fit-Outs & Scenic Lounges',
   },
   {
-    image: '/images/spacesec2.jpeg',
+    image: '/images/spacesec2.webp',
     tag: 'Luxury Residential',
     title: 'Penthouse Living & Architectural Lounges',
   },
   {
-    image: '/images/spacesec3.jpeg',
+    image: '/images/spacesec3.webp',
     tag: 'Custom Fit-Out',
     title: 'Bespoke Carpentry & Marble Finishes',
   },

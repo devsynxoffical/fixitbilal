@@ -70,7 +70,7 @@ const features = [
 ];
 
 const heroImages = [
-  "/images/wpc decking/pic1.jpg",
+  "/images/wpc decking/pic1.webp",
   "/images/wpc decking/pic3.avif",
 ];
 

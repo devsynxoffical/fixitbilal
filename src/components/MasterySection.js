@@ -6,7 +6,7 @@ const galleryItems = [
     id: 1,
     title: 'Palm Jumeirah Signature Villa',
     category: 'Residential',
-    image: '/images/IMG-20250805-WA0103.jpg',
+    image: '/images/IMG-20250805-WA0103.webp',
     location: 'Palm Jumeirah, Dubai',
     span: 'tall',
   },
@@ -14,7 +14,7 @@ const galleryItems = [
     id: 2,
     title: 'Downtown Dubai Luxury Penthouse',
     category: 'Residential',
-    image: '/images/IMG-20250805-WA0108.jpg',
+    image: '/images/IMG-20250805-WA0108.webp',
     location: 'Downtown Dubai',
     span: 'normal',
   },
@@ -22,7 +22,7 @@ const galleryItems = [
     id: 3,
     title: 'Executive Corporate Fit-Out',
     category: 'Commercial',
-    image: '/images/IMG-20250805-WA0115.jpg',
+    image: '/images/IMG-20250805-WA0115.webp',
     location: 'Business Bay, Dubai',
     span: 'wide',
   },
@@ -30,7 +30,7 @@ const galleryItems = [
     id: 4,
     title: 'Bespoke Joinery & Marble Suite',
     category: 'Custom Fit-out',
-    image: '/images/IMG-20250805-WA0121.jpg',
+    image: '/images/IMG-20250805-WA0121.webp',
     location: 'DIFC, Dubai',
     span: 'normal',
   },
@@ -38,7 +38,7 @@ const galleryItems = [
     id: 5,
     title: 'WPC Outdoor Decking & Lounge',
     category: 'Outdoor Decking',
-    image: '/images/IMG-20250805-WA0126.jpg',
+    image: '/images/IMG-20250805-WA0126.webp',
     location: 'Emirates Hills, Dubai',
     span: 'normal',
   },
@@ -46,7 +46,7 @@ const galleryItems = [
     id: 6,
     title: 'Modern Modular Kitchen & Dining',
     category: 'Residential',
-    image: '/images/IMG-20250805-WA0129.jpg',
+    image: '/images/IMG-20250805-WA0129.webp',
     location: 'Dubai Marina',
     span: 'normal',
   },
@@ -72,7 +72,7 @@ function ProjectCard({ item, onClick, delay = 0 }) {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           onError={(e) => {
             // Fallback to a known-good image if this one fails to load
-            e.target.src = '/images/IMG-20250805-WA0140.jpg';
+            e.target.src = '/images/IMG-20250805-WA0140.webp';
           }}
         />
 

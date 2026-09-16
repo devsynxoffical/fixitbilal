@@ -65,7 +65,7 @@ export default function Navbar({ links = [], onContactClick, isDarkHero = false 
             <Link to="/" className="group inline-flex items-center">
               <div className="relative flex-shrink-0">
                 <img
-                  src="/images/bkd-logo.png"
+                  src="/images/bkd-logo.webp"
                   alt="BKD Contracting Logo"
                   className="w-14 h-14 md:w-18 md:h-18object-contain transition-all duration-500 group-hover:scale-105"
                 />
