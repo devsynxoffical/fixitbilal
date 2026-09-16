@@ -9,23 +9,19 @@ export default function SectionHeading({ kicker, title, subtitle, align = 'cente
   return (
     <Reveal className={`flex flex-col ${alignClass} mb-14`}>
       {kicker && (
-        <div className="flex items-center gap-4 text-[10px] uppercase tracking-[0.5em] text-[#C9A15D] font-medium mb-4">
-          <span className="w-6 h-px bg-[#C9A15D]/80" />
-          <span>{kicker}</span>
-          {align === 'center' && <span className="w-6 h-px bg-[#C9A15D]/80" />}
-        </div>
+        <h2
+          className={`font-serif text-4xl md:text-6xl font-light leading-[1.08] tracking-tight mb-4 ${
+            light ? 'text-[#1C120E]' : 'text-white'
+          }`}
+        >
+          {kicker}
+        </h2>
       )}
-      <h2
-        className={`font-serif text-4xl md:text-6xl font-light leading-[1.08] tracking-tight ${
-          light ? 'text-[#D9C7B1]' : 'text-white'
-        }`}
-      >
+      <h3 className="text-lg md:text-xl text-[#C9A15D] font-medium tracking-wide mb-6">
         {title}
-      </h2>
+      </h3>
       {subtitle && (
-        <p className={`mt-4 max-w-2xl text-sm md:text-base font-normal leading-relaxed tracking-wide ${
-          light ? 'text-[#D9C7B1]/90' : 'text-[#D9C7B1]/90'
-        }`}>
+        <p className="mt-4 max-w-2xl text-sm md:text-base font-normal leading-relaxed tracking-wide text-[#5E524A]">
           {subtitle}
         </p>
       )}

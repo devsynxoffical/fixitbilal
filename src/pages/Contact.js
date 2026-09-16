@@ -30,45 +30,45 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="font-sans overflow-x-hidden bg-[#1C120E] text-[#D9C7B1]">
+    <div className="font-sans overflow-x-hidden bg-[#FAFAFA] text-[#1C120E]">
       <Navbar links={navLinks} onContactClick={() => setShowContact(true)} />
 
       {/* ================= CUSTOM CONTACT HERO ================= */}
-      <section className="min-h-[70vh] h-auto pt-32 pb-24 md:pt-40 md:pb-32 relative overflow-hidden bg-[#1C120E] border-b border-[#C9A15D]/10">
-        <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-[#C9A15D]/5 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
+      <section className="min-h-[70vh] h-auto pt-32 pb-24 md:pt-40 md:pb-32 relative overflow-hidden bg-[#F4F0EA] border-b border-[#1C120E]/10">
+        <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-[#C9A15D]/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-white/40 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col md:flex-row items-center justify-between gap-16">
           
           {/* Left Content */}
           <div className="flex-1 text-center md:text-left z-10 w-full">
-            <div className="entrance-fade-up d-1 text-[10px] tracking-[0.35em] uppercase text-[#D9C7B1]/50 mb-6 font-mono flex items-center justify-center md:justify-start gap-2">
-              <span className="text-[#C9A15D] font-semibold">Home</span>
-              <span className="text-[#D9C7B1]/30">/</span>
-              <span className="font-medium text-[#D9C7B1]/80">Contact</span>
+            <div className="entrance-fade-up d-1 text-[10px] tracking-[0.35em] uppercase text-[#1C120E]/50 mb-6 font-mono flex items-center justify-center md:justify-start gap-2 font-semibold">
+              <span className="text-[#C9A15D]">Home</span>
+              <span className="text-[#1C120E]/30">/</span>
+              <span className="font-medium text-[#1C120E]/80">Contact</span>
             </div>
             
             <div className="entrance-fade-up d-2 flex items-center justify-center md:justify-start gap-3 mb-6">
               <span className="w-8 h-px bg-[#C9A15D]/50" />
-              <span className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#C9A15D] font-semibold">
+              <span className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#C9A15D] font-bold">
                 Get In Touch
               </span>
               <span className="w-8 h-px bg-[#C9A15D]/50 md:hidden" />
             </div>
 
-            <h1 className="section-heading text-4xl md:text-5xl lg:text-[60px] text-[#D9C7B1] leading-[1.1] mb-6 font-serif font-light tracking-tight">
+            <h1 className="section-heading text-4xl md:text-5xl lg:text-[60px] text-[#1C120E] leading-[1.1] mb-6 font-serif font-light tracking-tight">
               Let's Talk About<br/>
               <span className="block text-[#C9A15D] italic font-medium mt-2">
                 Your Project.
               </span>
             </h1>
 
-            <p className="entrance-fade-up d-4 text-sm md:text-lg text-[#D9C7B1]/70 font-light leading-relaxed mb-10 max-w-lg mx-auto md:mx-0">
+            <p className="entrance-fade-up d-4 text-sm md:text-lg text-[#5E524A] font-normal leading-relaxed mb-10 max-w-lg mx-auto md:mx-0">
               Whether it's a renovation, a fit-out, or a maintenance request — we reply within 24 hours to get you started.
             </p>
 
             <div className="entrance-fade-up d-5 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a href={`tel:${contactInfo.phoneRaw}`} className="btn-gold px-8 py-4 text-xs uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(201,161,93,0.15)]">
+              <a href={`tel:${contactInfo.phoneRaw}`} className="btn-gold px-8 py-4 text-xs uppercase tracking-[0.2em] shadow-md rounded-full">
                 <span>Call Now</span>
                 <Icon name="phone" size={14} />
               </a>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 href={`https://wa.me/${contactInfo.phoneRaw}?text=Hello!%20I%27m%20interested%20in%20your%20services.`}
                 target="_blank"
                 rel="noreferrer"
-                className="btn-outline-gold px-8 py-4 text-xs uppercase tracking-[0.2em] bg-[#1C120E]"
+                className="btn-outline-gold px-8 py-4 text-xs uppercase tracking-[0.2em] bg-white rounded-full"
               >
                 <span>WhatsApp Us</span>
                 <Icon name="whatsapp" size={14} />
@@ -86,39 +86,39 @@ export default function ContactPage() {
 
           {/* Right Content (Quick Info Card) */}
           <div className="flex-1 w-full max-w-md mx-auto md:max-w-none relative z-10 pt-8 md:pt-0">
-            <div className="entrance-fade-up d-7 bg-[#2E1F1A]/40 backdrop-blur-xl border border-[#C9A15D]/20 rounded-3xl p-8 shadow-2xl relative overflow-hidden group">
+            <div className="entrance-fade-up d-7 bg-white border border-[#E8E2D8] rounded-3xl p-8 shadow-xl relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-[#C9A15D]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <h3 className="text-xl font-serif text-[#C9A15D] mb-8 relative z-10">Direct Contact</h3>
+              <h3 className="text-xl font-serif text-[#C9A15D] mb-8 relative z-10 font-bold">Direct Contact</h3>
               
               <div className="space-y-6 relative z-10">
                 <a href={`tel:${contactInfo.phoneRaw}`} className="flex items-start gap-5 group/item">
-                  <div className="w-10 h-10 rounded-full border border-[#C9A15D]/30 flex items-center justify-center text-[#C9A15D] bg-[#1C120E]/50 group-hover/item:bg-[#C9A15D] group-hover/item:text-[#1C120E] transition-all">
+                  <div className="w-10 h-10 rounded-full border border-[#C9A15D]/40 flex items-center justify-center text-[#C9A15D] bg-[#FAFAFA] group-hover/item:bg-[#C9A15D] group-hover/item:text-white transition-all shadow-sm">
                     <Icon name="phone" size={16} />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#D9C7B1]/50 mb-1">Phone</p>
-                    <p className="text-sm font-medium text-[#D9C7B1] group-hover/item:text-[#C9A15D] transition-colors">{contactInfo.phone}</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#1C120E]/50 mb-1 font-semibold">Phone</p>
+                    <p className="text-sm font-semibold text-[#1C120E] group-hover/item:text-[#C9A15D] transition-colors">{contactInfo.phone}</p>
                   </div>
                 </a>
 
                 <a href={`mailto:${contactInfo.email}`} className="flex items-start gap-5 group/item">
-                  <div className="w-10 h-10 rounded-full border border-[#C9A15D]/30 flex items-center justify-center text-[#C9A15D] bg-[#1C120E]/50 group-hover/item:bg-[#C9A15D] group-hover/item:text-[#1C120E] transition-all">
+                  <div className="w-10 h-10 rounded-full border border-[#C9A15D]/40 flex items-center justify-center text-[#C9A15D] bg-[#FAFAFA] group-hover/item:bg-[#C9A15D] group-hover/item:text-white transition-all shadow-sm">
                     <Icon name="mail" size={16} />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#D9C7B1]/50 mb-1">Email</p>
-                    <p className="text-sm font-medium text-[#D9C7B1] group-hover/item:text-[#C9A15D] transition-colors">{contactInfo.email}</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#1C120E]/50 mb-1 font-semibold">Email</p>
+                    <p className="text-sm font-semibold text-[#1C120E] group-hover/item:text-[#C9A15D] transition-colors">{contactInfo.email}</p>
                   </div>
                 </a>
 
                 <div className="flex items-start gap-5 group/item">
-                  <div className="w-10 h-10 rounded-full border border-[#C9A15D]/30 flex items-center justify-center text-[#C9A15D] bg-[#1C120E]/50 group-hover/item:bg-[#C9A15D] group-hover/item:text-[#1C120E] transition-all">
+                  <div className="w-10 h-10 rounded-full border border-[#C9A15D]/40 flex items-center justify-center text-[#C9A15D] bg-[#FAFAFA] group-hover/item:bg-[#C9A15D] group-hover/item:text-white transition-all shadow-sm">
                     <Icon name="clock" size={16} />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#D9C7B1]/50 mb-1">Hours</p>
-                    <p className="text-sm font-medium text-[#D9C7B1] group-hover/item:text-[#C9A15D] transition-colors">Mon - Sat: 9:00 AM - 6:00 PM</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#1C120E]/50 mb-1 font-semibold">Hours</p>
+                    <p className="text-sm font-semibold text-[#1C120E] group-hover/item:text-[#C9A15D] transition-colors">Mon - Sat: 9:00 AM - 6:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function ContactPage() {
 
       {/* ================= MARQUEE ================= */}
       <Marquee
-        dark
+        dark={false}
         items={[
           { text: "We Reply Within 24 Hours" },
           { text: "Free Consultation" },
@@ -141,11 +141,11 @@ export default function ContactPage() {
 
       {/* ================= CONTACT SECTION ================= */}
       <SectionFlip id="contact-form">
-        <section className="py-20 md:py-28 bg-[#1C120E] relative overflow-hidden">
+        <section className="py-20 md:py-28 bg-[#FAFAFA] relative overflow-hidden">
           <div className="absolute -top-40 -right-40 w-[30rem] h-[30rem] rounded-full bg-[#C9A15D]/10 blur-3xl pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
-              light
+              light={false}
               kicker="Contact Us"
               title="Tell Us About Your Project"
               subtitle="Fill in the form and our team will get back to you within 24 hours."
@@ -156,44 +156,44 @@ export default function ContactPage() {
               <Reveal direction="left" className="lg:col-span-2">
                 <div className="space-y-4">
                   {contactChannels.map((c) => (
-                    <div key={c.title} className="flex items-start gap-5 p-6 rounded-2xl glass-dark border border-[#C9A15D]/20 hover:border-[#C9A15D] transition-all duration-300 group">
-                      <span className="w-12 h-12 shrink-0 rounded-2xl bg-gold-gradient flex items-center justify-center text-[#1C120E] group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-md">
+                    <div key={c.title} className="flex items-start gap-5 p-6 rounded-2xl bg-white border border-[#E8E2D8] hover:border-[#C9A15D] transition-all duration-300 shadow-sm group">
+                      <span className="w-12 h-12 shrink-0 rounded-2xl bg-gold-gradient flex items-center justify-center text-white group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-md">
                         <Icon name={c.icon} size={20} strokeWidth={2.2} />
                       </span>
                       <div>
-                        <div className="text-[10px] uppercase tracking-[0.25em] text-[#C9A15D] font-semibold mb-1">{c.title}</div>
+                        <div className="text-[10px] uppercase tracking-[0.25em] text-[#C9A15D] font-bold mb-1">{c.title}</div>
                         {c.href ? (
-                          <a href={c.href} target={c.icon === 'whatsapp' ? '_blank' : undefined} rel="noreferrer" className="text-white font-medium hover:text-[#C9A15D] transition-colors">
+                          <a href={c.href} target={c.icon === 'whatsapp' ? '_blank' : undefined} rel="noreferrer" className="text-[#1C120E] font-semibold hover:text-[#C9A15D] transition-colors">
                             {c.desc}
                           </a>
                         ) : (
-                          <span className="text-white font-medium">{c.desc}</span>
+                          <span className="text-[#1C120E] font-semibold">{c.desc}</span>
                         )}
                       </div>
                     </div>
                   ))}
 
-                  <div className="p-6 rounded-2xl glass-dark border border-[#C9A15D]/40 relative overflow-hidden shadow-2xl">
+                  <div className="p-6 rounded-2xl bg-white border border-[#E8E2D8] relative overflow-hidden shadow-md">
                     <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-[#C9A15D]/10 blur-2xl pointer-events-none" />
                     <div className="relative">
-                      <div className="text-[10px] uppercase tracking-[0.25em] text-[#C9A15D] font-semibold mb-2">Working Hours</div>
-                      <div className="text-xl font-semibold mb-1 text-white">{contactInfo.hours}</div>
-                      <div className="text-sm text-[#D9C7B1]/65 font-light">Emergency maintenance available 24/7.</div>
-                      <a href={`tel:${contactInfo.phoneRaw}`} className="mt-5 inline-flex items-center gap-2 text-[#C9A15D] hover:text-[#D9C7B1] transition-colors text-sm font-semibold">
+                      <div className="text-[10px] uppercase tracking-[0.25em] text-[#C9A15D] font-bold mb-2">Working Hours</div>
+                      <div className="text-xl font-bold mb-1 text-[#1C120E]">{contactInfo.hours}</div>
+                      <div className="text-sm text-[#5E524A] font-normal">Emergency maintenance available 24/7.</div>
+                      <a href={`tel:${contactInfo.phoneRaw}`} className="mt-5 inline-flex items-center gap-2 text-[#C9A15D] hover:text-[#1C120E] transition-colors text-sm font-bold">
                         <Icon name="phone" size={15} />
                         {contactInfo.phone}
                       </a>
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-2xl glass-dark border border-[#C9A15D]/20">
-                    <div className="text-[10px] uppercase tracking-[0.25em] text-[#C9A15D] font-semibold mb-3">Explore</div>
+                  <div className="p-6 rounded-2xl bg-white border border-[#E8E2D8]">
+                    <div className="text-[10px] uppercase tracking-[0.25em] text-[#C9A15D] font-bold mb-3">Explore</div>
                     <div className="flex flex-wrap gap-2">
                       {navLinks.filter((l) => l.to !== '/contact').map((l) => (
                         <Link
                           key={l.to}
                           to={l.to}
-                          className="text-xs px-4 py-2 rounded-full bg-[#2E1F1A] text-[#D9C7B1]/80 hover:bg-[#C9A15D] hover:text-[#1C120E] transition-all duration-300 border border-[#C9A15D]/20"
+                          className="text-xs px-4 py-2 rounded-full bg-[#FAFAFA] text-[#1C120E] hover:bg-[#C9A15D] hover:text-white transition-all duration-300 border border-[#E8E2D8]"
                         >
                           {l.label}
                         </Link>
@@ -205,28 +205,28 @@ export default function ContactPage() {
 
               {/* FORM COLUMN */}
               <Reveal direction="right" className="lg:col-span-3">
-                <div className="relative rounded-3xl glass-dark p-6 md:p-10 shadow-2xl overflow-hidden border border-[#C9A15D]/30">
+                <div className="relative rounded-3xl bg-white p-6 md:p-10 shadow-xl overflow-hidden border border-[#E8E2D8]">
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gold-gradient" />
                   {sent ? (
                     <div className="py-16 text-center">
-                      <div className="mx-auto w-20 h-20 rounded-full bg-gold-gradient flex items-center justify-center text-[#1C120E] mb-6 animate-bounce">
+                      <div className="mx-auto w-20 h-20 rounded-full bg-gold-gradient flex items-center justify-center text-white mb-6 animate-bounce shadow-md">
                         <Icon name="check" size={36} strokeWidth={3} />
                       </div>
-                      <h3 className="font-serif text-3xl text-white mb-3">Thank You!</h3>
-                      <p className="text-[#D9C7B1]/75 font-light max-w-md mx-auto">
+                      <h3 className="font-serif text-3xl text-[#1C120E] mb-3">Thank You!</h3>
+                      <p className="text-[#5E524A] font-normal max-w-md mx-auto">
                         Your message has been received. Our team will contact you within 24 hours.
                       </p>
-                      <button onClick={() => setSent(false)} className="btn-outline-gold mt-8 px-8 py-3.5 text-xs uppercase tracking-widest">
+                      <button onClick={() => setSent(false)} className="btn-outline-gold mt-8 px-8 py-3.5 text-xs uppercase tracking-widest rounded-full">
                         <span>Send Another Message</span>
                       </button>
                     </div>
                   ) : (
                     <>
                       <div className="mb-8">
-                        <span className="ornament text-[11px] tracking-[0.3em] uppercase text-[#C9A15D] font-semibold mb-3 inline-flex">
+                        <span className="ornament text-[11px] tracking-[0.3em] uppercase text-[#C9A15D] font-bold mb-3 inline-flex">
                           Send a Message
                         </span>
-                        <h3 className="font-serif text-2xl md:text-3xl text-white">
+                        <h3 className="font-serif text-2xl md:text-3xl text-[#1C120E]">
                           Request a Free Quote
                         </h3>
                       </div>

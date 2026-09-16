@@ -28,74 +28,70 @@ export default function ServicesPage() {
   const [showContact, setShowContact] = useState(false);
 
   return (
-    <div className="font-sans overflow-x-hidden bg-[#1C120E] text-[#D9C7B1]">
-      <Navbar links={navLinks} onContactClick={() => setShowContact(true)} />
+    <div className="font-sans overflow-x-hidden bg-[#FAFAFA] text-[#1C120E]">
+      <Navbar links={navLinks} onContactClick={() => setShowContact(true)} isDarkHero={true} />
 
       {/* ================= CUSTOM SERVICES HERO ================= */}
-      <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden bg-[#F9F8F6] border-b border-[#1C120E]/10">
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#C9A15D]/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1C120E]/5 rounded-full blur-3xl pointer-events-none" />
+      <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#0C0A08]">
+        {/* Background Image */}
+        <img
+          src="/service-hero.png"
+          alt="Services Hero Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-        <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col items-center justify-center text-center w-full z-10 py-10">
           
-          {/* Left Content */}
-          <div className="flex-1 text-center md:text-left z-10 w-full">
-            <div className="entrance-fade-up d-1 text-[10px] tracking-[0.35em] uppercase text-[#1C120E]/50 mb-6 font-mono flex items-center justify-center md:justify-start gap-2">
-              <span className="text-[#C9A15D] font-semibold">Home</span>
-              <span className="text-[#1C120E]/30">/</span>
-              <span className="font-medium text-[#1C120E]/70">Services</span>
-            </div>
-            
-            <div className="entrance-fade-up d-2 flex items-center justify-center md:justify-start gap-3 mb-6">
-              <span className="w-8 h-px bg-[#C9A15D]" />
-              <span className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#C9A15D] font-semibold">
+          {/* Centered Content with Radial Gradient Backdrop */}
+          <div
+            className="w-full max-w-3xl flex flex-col items-center"
+            style={{
+              background: 'radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0) 75%)',
+              padding: '3rem 2rem',
+              borderRadius: '100px',
+            }}
+          >
+            <div className="entrance-fade-up d-2 flex items-center justify-center gap-3 mb-6">
+              <span className="w-8 h-px bg-[#C9A15D]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
+              <span
+                className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#C9A15D] font-bold"
+                style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.6)' }}
+              >
                 What We Do
               </span>
-              <span className="w-8 h-px bg-[#C9A15D] md:hidden" />
+              <span className="w-8 h-px bg-[#C9A15D]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
             </div>
 
-            <h1 className="section-heading text-4xl md:text-5xl lg:text-[56px] text-[#1C120E] leading-[1.1] mb-6 font-serif font-light tracking-tight">
+            <h1
+              className="section-heading text-4xl md:text-6xl lg:text-[72px] text-white leading-[1.1] mb-6 font-serif font-light tracking-tight text-center"
+              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)' }}
+            >
               Complete Services,<br/>
-              <span className="block text-[#C9A15D] italic font-medium mt-2">
+              <span
+                className="block text-[#C9A15D] italic font-medium mt-2"
+                style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}
+              >
                 One Trusted Partner.
               </span>
             </h1>
 
-            <p className="entrance-fade-up d-4 text-sm md:text-lg text-[#1C120E]/80 font-normal leading-relaxed mb-10 max-w-lg mx-auto md:mx-0">
+            <p
+              className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-10 max-w-xl text-center"
+              style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7)' }}
+            >
               From design and renovation to maintenance — BKD Contracting handles every detail of your project with precision and care.
             </p>
 
-            <div className="entrance-fade-up d-5 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <button onClick={() => setShowContact(true)} className="bg-[#1C120E] text-white hover:bg-[#C9A15D] hover:text-[#1C120E] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-semibold shadow-sm">
+            <div className="entrance-fade-up d-5 flex flex-col sm:flex-row gap-4 justify-center">
+              <button onClick={() => setShowContact(true)} className="bg-[#C9A15D] text-white hover:bg-white hover:text-[#1C120E] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold shadow-md rounded-full border border-transparent">
                 <span>Get a Free Quote</span>
               </button>
               <button
                 onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border border-[#1C120E]/20 text-[#1C120E] hover:border-[#C9A15D] hover:text-[#C9A15D] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-semibold"
+                className="border border-white/40 text-white hover:border-[#C9A15D] hover:bg-[#C9A15D] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold rounded-full backdrop-blur-sm bg-white/10 shadow-md"
               >
                 <span>View Packages</span>
               </button>
-            </div>
-          </div>
-
-          {/* Right Content (Badges grid) */}
-          <div className="flex-1 relative z-10 w-full max-w-md mx-auto md:max-w-none pt-10 md:pt-0">
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { name: "Design & Build", icon: "paintbrush" },
-                { name: "Renovation", icon: "hammer" },
-                { name: "Fit-Outs", icon: "sofa" },
-                { name: "Maintenance", icon: "wrench" },
-              ].map((f, i) => (
-                <div key={f.name} className={`entrance-fade-up flex flex-col items-center text-center gap-3 p-6 rounded-2xl border border-[#1C120E]/10 bg-white/60 backdrop-blur-md shadow-sm hover:border-[#C9A15D]/50 hover:shadow-md transition-all duration-300 ${i % 2 !== 0 ? 'mt-8' : ''}`} style={{ transitionDelay: `${i * 100}ms` }}>
-                  <div className="w-12 h-12 rounded-full bg-[#1C120E]/5 flex items-center justify-center text-[#C9A15D]">
-                    <Icon name={f.icon} size={20} strokeWidth={2} />
-                  </div>
-                  <span className="text-xs tracking-wider uppercase font-semibold text-[#1C120E]">
-                    {f.name}
-                  </span>
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -103,7 +99,7 @@ export default function ServicesPage() {
 
       {/* ================= MARQUEE ================= */}
       <Marquee
-        dark
+        dark={false}
         items={[
           { text: "Interior Design" },
           { text: "Renovation" },
@@ -116,11 +112,10 @@ export default function ServicesPage() {
 
       {/* ================= SERVICES ================= */}
       <SectionFlip id="services-list">
-        <section className="py-20 md:py-28 bg-[#1C120E] relative overflow-hidden">
+        <section className="py-20 md:py-28 bg-[#FAFAFA] relative overflow-hidden">
           <div className="absolute top-20 right-0 w-80 h-80 rounded-full bg-[#C9A15D]/10 blur-3xl pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
-              light
               kicker="What We Do"
               title="Our Services"
               subtitle="From concept to completion, we handle every detail of your project with precision and care."
@@ -139,12 +134,11 @@ export default function ServicesPage() {
 
       {/* ================= PROCESS ================= */}
       <SectionFlip>
-        <section className="py-20 md:py-28 bg-[#2E1F1A] relative overflow-hidden">
+        <section className="py-20 md:py-28 bg-[#E5DCC9] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[24rem] h-[24rem] rounded-full bg-[#C9A15D]/10 blur-3xl pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
-              light
               kicker="How We Work"
               title="A Simple, Proven Process"
               subtitle="Four clear steps from first hello to flawless handover."
@@ -153,37 +147,37 @@ export default function ServicesPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {processSteps.map((item, i) => (
                 <Reveal key={item.step} delay={i * 120}>
-                  <TiltCard className="group relative h-full rounded-2xl glass-dark p-7 border border-[#C9A15D]/30 hover:border-[#C9A15D] transition-all duration-300 card-lift">
+                  <TiltCard className="group relative h-full rounded-2xl bg-white p-7 border border-[#E8E2D8] hover:border-[#C9A15D] transition-all duration-300 card-lift shadow-sm">
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 h-12 rounded-2xl bg-gold-gradient flex items-center justify-center text-[#1C120E] shadow-gold group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                      <div className="w-12 h-12 rounded-2xl bg-gold-gradient flex items-center justify-center text-white shadow-md group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
                         <Icon name={item.icon} size={22} strokeWidth={2.2} />
                       </div>
-                      <span className="text-3xl font-serif font-bold text-[#C9A15D]/30 group-hover:text-[#C9A15D]/80 transition-colors duration-300">
+                      <span className="text-3xl font-serif font-bold text-[#C9A15D]/40 group-hover:text-[#C9A15D] transition-colors duration-300">
                         {item.step}
                       </span>
                     </div>
-                    <div className="text-lg font-semibold text-[#D9C7B1] mb-2">{item.title}</div>
-                    <div className="text-sm text-[#D9C7B1]/65 font-light leading-relaxed">{item.desc}</div>
-                    <div className="mt-5 h-1 w-8 bg-[#C9A15D] rounded-full transition-all duration-500 group-hover:w-full shadow-[0_0_8px_#C9A15D]" />
+                    <div className="text-lg font-semibold text-[#1C120E] mb-2">{item.title}</div>
+                    <div className="text-sm text-[#5E524A] font-normal leading-relaxed">{item.desc}</div>
+                    <div className="mt-5 h-1 w-8 bg-[#C9A15D] rounded-full transition-all duration-500 group-hover:w-full" />
                   </TiltCard>
                 </Reveal>
               ))}
             </div>
 
             <Reveal className="mt-14">
-              <div className="rounded-3xl glass-dark border border-[#C9A15D]/30 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+              <div className="rounded-3xl bg-white border border-[#E8E2D8] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
                 <div>
-                  <div className="text-xl md:text-2xl font-serif font-medium text-[#D9C7B1]">Not sure where to start?</div>
-                  <p className="text-[#D9C7B1]/70 font-light mt-1">Talk to a principal architect and get a tailored recommendation within 24 hours.</p>
+                  <div className="text-xl md:text-2xl font-serif font-medium text-[#1C120E]">Not sure where to start?</div>
+                  <p className="text-[#5E524A] font-normal mt-1">Talk to a principal architect and get a tailored recommendation within 24 hours.</p>
                 </div>
                 <div className="flex items-center gap-5 shrink-0">
                   <div className="text-right">
                     <div className="text-3xl font-bold text-[#C9A15D]">
                       <Counter end={280} suffix="+" />
                     </div>
-                    <div className="text-[10px] uppercase tracking-widest text-[#D9C7B1]/60">Projects Done</div>
+                    <div className="text-[10px] uppercase tracking-widest text-[#1C120E]/60 font-semibold">Projects Done</div>
                   </div>
-                  <button onClick={() => setShowContact(true)} className="btn-gold text-xs uppercase tracking-[0.15em] px-7 py-3.5">
+                  <button onClick={() => setShowContact(true)} className="btn-gold text-xs uppercase tracking-[0.15em] px-7 py-3.5 shadow-md">
                     <span>Book Consultation</span>
                   </button>
                 </div>
@@ -195,10 +189,9 @@ export default function ServicesPage() {
 
       {/* ================= PACKAGES ================= */}
       <SectionFlip id="packages">
-        <section className="py-20 md:py-28 bg-[#1C120E]">
+        <section className="py-20 md:py-28 bg-[#FAFAFA]">
           <div className="max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
-              light
               kicker="Pricing"
               title="Service Packages"
               subtitle="Transparent packages built around your budget and vision."
@@ -215,13 +208,13 @@ export default function ServicesPage() {
             <Reveal className="mt-14">
               <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
                 {whyChooseUs.map((item, i) => (
-                  <div key={item.title} className="flex items-start gap-3 p-5 rounded-2xl glass-dark border border-[#C9A15D]/20 hover:border-[#C9A15D] transition-all duration-300 hover:shadow-soft group">
-                    <span className="w-10 h-10 shrink-0 rounded-xl bg-gold-gradient flex items-center justify-center text-[#1C120E] group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-md">
+                  <div key={item.title} className="flex items-start gap-3 p-5 rounded-2xl bg-white border border-[#E8E2D8] hover:border-[#C9A15D] transition-all duration-300 shadow-sm group">
+                    <span className="w-10 h-10 shrink-0 rounded-xl bg-gold-gradient flex items-center justify-center text-white group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-md">
                       <Icon name={item.icon} size={18} strokeWidth={2.2} />
                     </span>
                     <div>
-                      <div className="font-semibold text-[#D9C7B1] text-sm">{item.title}</div>
-                      <div className="text-xs text-[#D9C7B1]/65 font-light">{item.desc}</div>
+                      <div className="font-semibold text-[#1C120E] text-sm">{item.title}</div>
+                      <div className="text-xs text-[#5E524A] font-normal">{item.desc}</div>
                     </div>
                   </div>
                 ))}

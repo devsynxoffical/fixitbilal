@@ -31,7 +31,7 @@ export default function TestimonialSlider({ testimonials }) {
             "{active.text}"
           </p>
           <div className="flex flex-col items-center">
-            <div className="w-14 h-14 rounded-full bg-[#2E1F1A] text-[#C9A15D] border border-[#C9A15D]/40 font-serif text-lg font-normal flex items-center justify-center mb-3">
+            <div className="w-14 h-14 rounded-full bg-white text-[#C9A15D] border border-[#C9A15D]/40 font-serif text-lg font-bold flex items-center justify-center mb-3 shadow-sm">
               {active.initials}
             </div>
             <div className="font-medium text-[#1C120E] tracking-wide text-sm">{active.name}</div>

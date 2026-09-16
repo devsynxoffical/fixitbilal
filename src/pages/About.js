@@ -12,7 +12,6 @@ import SectionHeading from '../components/SectionHeading';
 import Marquee from '../components/Marquee';
 import Stats from '../components/Stats';
 import Partnerships from '../components/Partnerships';
-import TeamCard from '../components/TeamCard';
 import SmartImage from '../components/SmartImage';
 import CTA from '../components/CTA';
 import SectionFlip from '../components/SectionFlip';
@@ -24,67 +23,96 @@ import {
   whyChooseUs,
   stats,
   partnershipImages,
-  teamMembers,
 } from '../data/content';
 
 export default function AboutPage() {
   const [showContact, setShowContact] = useState(false);
 
   return (
-    <div className="font-sans overflow-x-hidden bg-[#1C120E] text-[#D9C7B1]">
-      <Navbar links={navLinks} onContactClick={() => setShowContact(true)} />
+    <div className="font-sans overflow-x-hidden bg-[#FAFAFA] text-[#1C120E]">
+      <Navbar links={navLinks} onContactClick={() => setShowContact(true)} isDarkHero={true} />
 
       {/* ================= CUSTOM ABOUT HERO ================= */}
-      <section className="min-h-[65vh] h-auto pt-32 pb-20 relative overflow-hidden bg-[#F9F8F6] border-b border-[#1C120E]/10 flex flex-col justify-center">
-        {/* Subtle texture/gradient */}
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-white/60 to-transparent pointer-events-none" />
-        
-        <div className="relative max-w-5xl mx-auto px-5 z-10 w-full text-center">
-          <div className="entrance-fade-up d-1 text-[10px] tracking-[0.35em] uppercase text-[#1C120E]/50 mb-8 font-mono flex items-center justify-center gap-2">
-            <span className="text-[#C9A15D] font-semibold">Home</span>
-            <span className="text-[#1C120E]/30">/</span>
-            <span className="font-medium text-[#1C120E]/70">About</span>
-          </div>
+      <section className="min-h-[70vh] h-auto pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex items-center bg-[#0C0A08]">
+        {/* Background Image */}
+        <img
+          src="/about-hero.png"
+          alt="About BKD Contracting Hero Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-          <h1 className="entrance-fade-up d-2 text-5xl md:text-7xl lg:text-[84px] text-[#1C120E] leading-[1.05] font-serif font-light tracking-tight mb-8">
-            Built on Craftsmanship,<br/>
-            <span className="block text-[#C9A15D] italic font-medium mt-2">
-              Driven by Trust.
-            </span>
-          </h1>
-
-          <div className="entrance-fade-up d-3 w-px h-16 bg-[#C9A15D] mx-auto mb-8" />
-
-          <p className="entrance-fade-up d-4 text-base md:text-xl text-[#1C120E]/70 font-light leading-relaxed mb-12 max-w-3xl mx-auto italic">
-            "BKD Contracting is Dubai's trusted partner for interior design, renovation, and property maintenance — transforming spaces with care since day one."
-          </p>
-
-          <div className="entrance-fade-up d-5 flex flex-wrap justify-center gap-3 mb-10">
-            {["Certified", "Insured", "On-Time", "UAE-Wide"].map((f) => (
-              <span key={f} className="rounded-full px-5 py-2.5 text-xs md:text-sm text-[#1C120E]/80 tracking-wider uppercase font-medium flex items-center gap-2 border border-[#C9A15D]/20 bg-white/50">
-                <Icon name="check" size={13} strokeWidth={3} className="text-[#C9A15D]" />
-                {f}
+        <div className="relative max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col items-center justify-center text-center w-full z-10 py-10">
+          
+          {/* Centered Content with Radial Gradient Backdrop */}
+          <div
+            className="w-full max-w-3xl flex flex-col items-center"
+            style={{
+              background: 'radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 80%)',
+              padding: '3rem 2rem',
+              borderRadius: '100px',
+            }}
+          >
+            <div className="entrance-fade-up d-2 flex items-center justify-center gap-3 mb-6">
+              <span className="w-8 h-px bg-[#C9A15D]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
+              <span
+                className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-[#C9A15D] font-bold"
+                style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.6)' }}
+              >
+                Who We Are
               </span>
-            ))}
-          </div>
+              <span className="w-8 h-px bg-[#C9A15D]" style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.5)' }} />
+            </div>
 
-          <div className="entrance-fade-up d-6 flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => setShowContact(true)} className="bg-[#1C120E] text-white hover:bg-[#C9A15D] hover:text-[#1C120E] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-semibold shadow-sm">
-              <span>Work With Us</span>
-            </button>
-            <button
-              onClick={() => document.getElementById('story')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border border-[#1C120E]/20 text-[#1C120E] hover:border-[#C9A15D] hover:text-[#C9A15D] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-semibold"
+            <h1
+              className="section-heading text-4xl md:text-6xl lg:text-[72px] text-white leading-[1.1] mb-6 font-serif font-light tracking-tight text-center"
+              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)' }}
             >
-              <span>Our Story</span>
-            </button>
+              Built on Craftsmanship,<br/>
+              <span
+                className="block text-[#C9A15D] italic font-medium mt-2"
+                style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}
+              >
+                Driven by Trust.
+              </span>
+            </h1>
+
+            <p
+              className="entrance-fade-up d-4 text-sm md:text-lg text-white font-normal leading-relaxed mb-8 max-w-xl text-center"
+              style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7)' }}
+            >
+              BKD Contracting is Dubai's premier partner for turnkey fit-outs, interior design, and property transformations — delivering excellence since day one.
+            </p>
+
+            <div className="entrance-fade-up d-5 flex flex-wrap justify-center gap-3 mb-10">
+              {["Certified", "Insured", "On-Time", "UAE-Wide"].map((f) => (
+                <span
+                  key={f}
+                  className="rounded-full px-5 py-2 text-xs text-white tracking-wider uppercase font-semibold flex items-center gap-2 border border-[#C9A15D]/50 bg-black/40 backdrop-blur-md shadow-md"
+                >
+                  <Icon name="check" size={13} strokeWidth={3} className="text-[#C9A15D]" />
+                  {f}
+                </span>
+              ))}
+            </div>
+
+            <div className="entrance-fade-up d-6 flex flex-col sm:flex-row gap-4 justify-center">
+              <button onClick={() => setShowContact(true)} className="bg-[#C9A15D] text-white hover:bg-white hover:text-[#1C120E] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold shadow-md rounded-full border border-transparent">
+                <span>Work With Us</span>
+              </button>
+              <button
+                onClick={() => document.getElementById('story')?.scrollIntoView({ behavior: 'smooth' })}
+                className="border border-white/40 text-white hover:border-[#C9A15D] hover:bg-[#C9A15D] transition-colors text-xs uppercase tracking-[0.2em] px-8 py-4 font-bold rounded-full backdrop-blur-sm bg-white/10 shadow-md"
+              >
+                <span>Our Story</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ================= MARQUEE ================= */}
       <Marquee
-        dark
+        dark={false}
         items={[
           { text: "15+ Years" },
           { text: "280+ Projects" },
@@ -96,7 +124,7 @@ export default function AboutPage() {
 
       {/* ================= STORY ================= */}
       <SectionFlip id="story">
-        <section className="py-20 md:py-28 bg-[#1C120E] relative overflow-hidden">
+        <section className="py-20 md:py-28 bg-[#FAFAFA] relative overflow-hidden">
           <div className="absolute -top-40 -left-40 w-[30rem] h-[30rem] rounded-full bg-[#C9A15D]/10 blur-3xl pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
@@ -104,18 +132,18 @@ export default function AboutPage() {
                 <div className="relative">
                   <div className="absolute -top-6 -left-6 w-40 h-40 rounded-2xl bg-[#C9A15D]/20 -z-10" />
                   <div className="absolute -bottom-8 -right-6 w-52 h-52 rounded-2xl border-2 border-[#C9A15D]/40 -z-10" />
-                  <div className="img-zoom rounded-3xl shadow-deep overflow-hidden border border-[#C9A15D]/30">
+                  <div className="img-zoom rounded-3xl shadow-xl overflow-hidden border border-[#C9A15D]/30">
                     <SmartImage
-                      src="/images/IMG-20250805-WA0150.jpg"
+                      src="/images/about-story.jpg"
                       alt="BKD Contracting team"
                       className="w-full h-[420px] md:h-[520px] object-cover"
                     />
                   </div>
-                  <div className="absolute -bottom-8 left-6 bg-[#2E1F1A] text-[#D9C7B1] rounded-2xl px-6 py-4 shadow-2xl flex items-center gap-4 border border-[#C9A15D]/50">
-                    <div className="text-3xl font-extralight text-[#C9A15D] font-serif">
+                  <div className="absolute -bottom-8 left-6 bg-white text-[#1C120E] rounded-2xl px-6 py-4 shadow-xl flex items-center gap-4 border border-[#C9A15D]/40">
+                    <div className="text-3xl font-bold text-[#C9A15D] font-serif">
                       <Counter end={15} suffix="+" />
                     </div>
-                    <div className="text-xs leading-tight tracking-wide font-light uppercase text-[#D9C7B1]/80">
+                    <div className="text-xs leading-tight tracking-wide font-medium uppercase text-[#5E524A]">
                       Years of<br />Craftsmanship
                     </div>
                   </div>
@@ -123,18 +151,18 @@ export default function AboutPage() {
               </Reveal>
 
               <Reveal direction="right">
-                <span className="ornament text-[11px] tracking-[0.35em] uppercase text-[#C9A15D] font-semibold mb-4 inline-flex">
+                <span className="ornament text-[11px] tracking-[0.35em] uppercase text-[#C9A15D] font-bold mb-4 inline-flex">
                   Our Story
                 </span>
-                <h2 className="font-serif text-3xl md:text-5xl text-[#D9C7B1] leading-tight mb-6">
+                <h2 className="font-serif text-3xl md:text-5xl text-[#1C120E] leading-tight mb-6 font-light">
                   Trusted Experts in<br />Property Transformation
                 </h2>
-                <p className="text-base md:text-lg text-[#D9C7B1]/75 font-light leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-[#5E524A] font-normal leading-relaxed mb-6">
                   What began as a small team of passionate craftsmen has grown into one of Dubai's most
                   trusted renovation and interior fit-out companies. From luxury villas to compact city
                   apartments, we bring the same level of precision, honesty, and pride to every project.
                 </p>
-                <p className="text-base md:text-lg text-[#D9C7B1]/75 font-light leading-relaxed mb-8">
+                <p className="text-base md:text-lg text-[#5E524A] font-normal leading-relaxed mb-8">
                   Our mission is simple: deliver beautiful, functional spaces — on time, on budget, and
                   with craftsmanship you can see and feel.
                 </p>
@@ -142,13 +170,13 @@ export default function AboutPage() {
                 <div className="grid sm:grid-cols-2 gap-4 mb-9">
                   {aboutHighlights.map((f, i) => (
                     <Reveal key={f.title} delay={i * 100}>
-                      <div className="flex items-start gap-4 p-5 rounded-2xl glass-dark border border-[#C9A15D]/20 hover:border-[#C9A15D] transition-all duration-300 hover:shadow-soft group">
-                        <span className="w-11 h-11 shrink-0 rounded-xl bg-gold-gradient flex items-center justify-center text-[#1C120E] group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-md">
+                      <div className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-[#E8E2D8] hover:border-[#C9A15D] transition-all duration-300 shadow-sm hover:shadow-md group">
+                        <span className="w-11 h-11 shrink-0 rounded-xl bg-gold-gradient flex items-center justify-center text-white group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-md">
                           <Icon name={f.icon} size={20} strokeWidth={2.2} />
                         </span>
                         <div>
-                          <div className="font-semibold text-white">{f.title}</div>
-                          <div className="text-sm text-[#D9C7B1]/65 font-light">{f.desc}</div>
+                          <div className="font-semibold text-[#1C120E]">{f.title}</div>
+                          <div className="text-sm text-[#5E524A] font-normal">{f.desc}</div>
                         </div>
                       </div>
                     </Reveal>
@@ -156,7 +184,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="flex flex-wrap gap-5">
-                  <button onClick={() => setShowContact(true)} className="btn-gold text-xs uppercase tracking-[0.15em] px-8 py-4">
+                  <button onClick={() => setShowContact(true)} className="btn-gold text-xs uppercase tracking-[0.15em] px-8 py-4 shadow-md">
                     <span>Start Your Project</span>
                   </button>
                   <button
@@ -174,12 +202,11 @@ export default function AboutPage() {
 
       {/* ================= VALUES / WHY CHOOSE US ================= */}
       <SectionFlip id="values">
-        <section className="py-20 md:py-28 bg-[#2E1F1A] relative overflow-hidden">
+        <section className="py-20 md:py-28 bg-[#E5DCC9] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[24rem] h-[24rem] rounded-full bg-[#C9A15D]/10 blur-3xl pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-5 md:px-6">
             <SectionHeading
-              light
               kicker="Why Choose Us"
               title="Craftsmanship You Can Trust"
               subtitle="At BKD Contracting, our principal architects deliver precision-engineered results with top-quality materials and zero compromises."
@@ -188,13 +215,13 @@ export default function AboutPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
               {whyChooseUs.map((item, i) => (
                 <Reveal key={item.title} delay={i * 120}>
-                  <TiltCard className="group relative h-full rounded-2xl glass-dark p-7 border border-[#C9A15D]/30 hover:border-[#C9A15D] transition-all duration-300 card-lift">
-                    <div className="w-12 h-12 mb-5 rounded-2xl bg-gold-gradient flex items-center justify-center text-[#1C120E] shadow-gold group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                  <TiltCard className="group relative h-full rounded-2xl bg-white p-7 border border-[#E8E2D8] hover:border-[#C9A15D] transition-all duration-300 card-lift shadow-sm">
+                    <div className="w-12 h-12 mb-5 rounded-2xl bg-gold-gradient flex items-center justify-center text-white shadow-md group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
                       <Icon name={item.icon} size={22} strokeWidth={2.2} />
                     </div>
-                    <div className="text-lg font-semibold text-[#D9C7B1] mb-2">{item.title}</div>
-                    <div className="text-sm text-[#D9C7B1]/65 font-light leading-relaxed">{item.desc}</div>
-                    <div className="mt-5 h-1 w-8 bg-[#C9A15D] rounded-full transition-all duration-500 group-hover:w-full shadow-[0_0_8px_#C9A15D]" />
+                    <div className="text-lg font-semibold text-[#1C120E] mb-2">{item.title}</div>
+                    <div className="text-sm text-[#5E524A] font-normal leading-relaxed">{item.desc}</div>
+                    <div className="mt-5 h-1 w-8 bg-[#C9A15D] rounded-full transition-all duration-500 group-hover:w-full" />
                   </TiltCard>
                 </Reveal>
               ))}
@@ -205,7 +232,7 @@ export default function AboutPage() {
 
       {/* ================= STATS ================= */}
       <SectionFlip>
-        <section className="py-16 md:py-20 bg-[#1C120E] relative overflow-hidden">
+        <section className="py-16 md:py-20 bg-[#FAFAFA] relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-5 md:px-6">
             <Stats stats={stats} />
           </div>
@@ -214,28 +241,6 @@ export default function AboutPage() {
 
       {/* ================= PARTNERSHIPS ================= */}
       <Partnerships images={partnershipImages} />
-
-      {/* ================= TEAM ================= */}
-      <SectionFlip id="team">
-        <section className="py-20 md:py-28 bg-[#2E1F1A]">
-          <div className="max-w-7xl mx-auto px-5 md:px-6">
-            <SectionHeading
-              light
-              kicker="The People"
-              title="Meet Our Experts"
-              subtitle="A passionate team of designers, engineers, and craftspeople behind every project."
-            />
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
-              {teamMembers.map((member, index) => (
-                <Reveal key={member.name} delay={index * 120}>
-                  <TeamCard member={member} />
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-      </SectionFlip>
 
       {/* ================= CTA ================= */}
       <SectionFlip>

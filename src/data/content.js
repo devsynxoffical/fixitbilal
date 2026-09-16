@@ -1,16 +1,16 @@
 export const heroImages = [
-  "/images/interrior/hero section.jpg",
+  "/images/IMG-20250805-WA0142.jpg",
   "/images/interrior/hero section2.jpg",
   "/images/interrior/Brown-living-room-ideas.jpg",
 ];
 
 export const services = [
-  { icon: "sofa", title: "Interior Design & Renovation", desc: "Tailored designs that match your lifestyle and elevate your space.", image: "/images/IMG-20250805-WA0149.jpg" },
-  { icon: "hammer", title: "Fit-Outs & Carpentry", desc: "Elegant carpentry and customized fit-outs built to perfection.", image: "/images/IMG-20250805-WA0148.jpg" },
-  { icon: "snowflake", title: "Air Conditioning & Electrical", desc: "Energy-efficient and safety-compliant AC and electrical solutions.", image: "/images/IMG-20250805-WA0147.jpg" },
-  { icon: "leaf", title: "Landscaping & Outdoor", desc: "Designing serene and functional outdoor living spaces.", image: "/images/IMG-20250805-WA0146.jpg" },
-  { icon: "paintbrush", title: "Painting & Flooring", desc: "Premium finishes using top-quality paints and materials.", image: "/images/IMG-20250805-WA0145.jpg" },
-  { icon: "sun", title: "WPC Outdoor Decking", desc: "Durable, eco-friendly WPC decking solutions engineered for Dubai's climate.", image: "/images/wpc decking/pic1.jpg", link: "/wpc-outdoor-decking" },
+  { icon: "sofa", title: "Interior Design & Renovation", desc: "Tailored designs that match your lifestyle and elevate your space.", image: "/images/services/service-1.jpg" },
+  { icon: "hammer", title: "Fit-Outs & Carpentry", desc: "Elegant carpentry and customized fit-outs built to perfection.", image: "/images/services/service-2.jpg" },
+  { icon: "snowflake", title: "Air Conditioning & Electrical", desc: "Energy-efficient and safety-compliant AC and electrical solutions.", image: "/images/services/service-3.jpg" },
+  { icon: "leaf", title: "Landscaping & Outdoor", desc: "Designing serene and functional outdoor living spaces.", image: "/images/services/service-4.jpg" },
+  { icon: "paintbrush", title: "Painting & Flooring", desc: "Premium finishes using top-quality paints and materials.", image: "/images/services/service-5.jpg" },
+  { icon: "sun", title: "WPC Outdoor Decking", desc: "Durable, eco-friendly WPC decking solutions engineered for Dubai's climate.", image: "/images/services/service-6.jpg", link: "/wpc-outdoor-decking" },
 ];
 
 export const whyChooseUs = [
@@ -28,7 +28,7 @@ export const servicePackages = [
     style: "Clean | Essential | Cost-Efficient",
     perfectFor: "Budget homes, rentals, first-time buyers",
     features: ["Neutral wall paint", "Ceramic/laminate flooring", "Ready-made MDF kitchen", "Standard fixtures", "Ceiling fans", "Functional lighting"],
-    image: "/images/IMG-20250805-WA0143.jpg",
+    image: "/images/packages/pkg-1.jpg",
     featured: false,
   },
   {
@@ -37,7 +37,7 @@ export const servicePackages = [
     style: "Sleek | Urban | Functional",
     perfectFor: "Airbnb homes, small families",
     features: ["Feature walls", "Vinyl/matte porcelain flooring", "Modular kitchen with quartz", "LED mirrors", "Smart switches"],
-    image: "/images/IMG-20250805-WA0142.jpg",
+    image: "/images/packages/pkg-2.jpg",
     featured: true,
   },
   {
@@ -46,7 +46,7 @@ export const servicePackages = [
     style: "Elegant | Custom | High-End Finishes",
     perfectFor: "Upscale homeowners, value maximizers",
     features: ["Textured finishes", "Italian marble flooring", "Designer kitchen", "Grohe/Kohler bathroom fittings", "Walk-in wardrobes", "Full smart automation"],
-    image: "/images/IMG-20250805-WA0141.jpg",
+    image: "/images/packages/pkg-3.jpg",
     featured: false,
   },
   {
@@ -55,7 +55,7 @@ export const servicePackages = [
     style: "Architectural | Bespoke | Ultra-Premium",
     perfectFor: "Marina/Downtown homes, signature builds",
     features: ["Marble slab backsplashes", "Wood panel features", "Frameless glass partitions", "Smart curtain controls", "Custom vanities"],
-    image: "/images/IMG-20250805-WA0140.jpg",
+    image: "/images/packages/pkg-4.jpg",
     featured: false,
   },
 ];
@@ -73,11 +73,38 @@ export const portfolioProjects = [
 ];
 
 export const portfolioImages = [
-  "/images/IMG-20250805-WA0147.jpg", "/images/IMG-20250805-WA0152.jpg", "/images/IMG-20250805-WA0143.jpg",
-  "/images/IMG-20250805-WA0149.jpg", "/images/IMG-20250805-WA0151.jpg", "/images/IMG-20250805-WA0145.jpg",
-  "/images/IMG-20250805-WA0140.jpg", "/images/IMG-20250805-WA0153.jpg", "/images/IMG-20250805-WA0148.jpg",
-  "/images/IMG-20250805-WA0142.jpg", "/images/IMG-20250805-WA0146.jpg", "/images/IMG-20250805-WA0139.jpg",
-  "/images/IMG-20250805-WA0141.jpg", "/images/IMG-20250805-WA0150.jpg", "/images/IMG-20250805-WA0144.jpg",
+  "/images/portfolio-extra-1.jpg",
+  "/images/portfolio-extra-2.jpg",
+  "/images/portfolio-extra-3.jpg",
+  "/images/portfolio-extra-4.jpg",
+  "/images/services/service-1.jpg",
+  "/images/services/service-2.jpg",
+  "/images/services/service-3.jpg",
+  "/images/services/service-4.jpg",
+  "/images/services/service-5.jpg",
+  "/images/services/service-6.jpg",
+  "/images/packages/pkg-1.jpg",
+  "/images/packages/pkg-2.jpg",
+  "/images/packages/pkg-3.jpg",
+  "/images/packages/pkg-4.jpg",
+  "/images/spacesec1.jpeg",
+  "/images/spacesec2.jpeg",
+  "/images/spacesec3.jpeg",
+  "/images/IMG-20250805-WA0147.jpg",
+  "/images/IMG-20250805-WA0152.jpg",
+  "/images/IMG-20250805-WA0143.jpg",
+  "/images/IMG-20250805-WA0149.jpg",
+  "/images/IMG-20250805-WA0151.jpg",
+  "/images/IMG-20250805-WA0145.jpg",
+  "/images/IMG-20250805-WA0140.jpg",
+  "/images/IMG-20250805-WA0153.jpg",
+  "/images/IMG-20250805-WA0148.jpg",
+  "/images/IMG-20250805-WA0142.jpg",
+  "/images/IMG-20250805-WA0146.jpg",
+  "/images/IMG-20250805-WA0139.jpg",
+  "/images/IMG-20250805-WA0141.jpg",
+  "/images/IMG-20250805-WA0150.jpg",
+  "/images/IMG-20250805-WA0144.jpg",
   "/images/IMG-20250805-WA0138.jpg",
 ];
 
@@ -114,7 +141,6 @@ export const navLinks = [
   { label: "Services", to: "/services" },
   { label: "Portfolio", to: "/portfolio" },
   { label: "About", to: "/about" },
-  { label: "Contact", to: "/contact" },
 ];
 
 export const contactInfo = {

@@ -48,12 +48,11 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Homepage />} />
-          {/* /* allows /route and /route/ (cPanel often adds a trailing slash) */}
-          <Route path="/services/*" element={<Services />} />
-          <Route path="/portfolio/*" element={<Portfolio />} />
-          <Route path="/about/*" element={<About />} />
-          <Route path="/contact/*" element={<Contact />} />
-          <Route path="/wpc-outdoor-decking/*" element={<WPCOutdoorDecking />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/wpc-outdoor-decking" element={<WPCOutdoorDecking />} />
         </Routes>
       </div>
     </Router>

@@ -28,9 +28,9 @@ const galleryItems = [
   },
   {
     id: 4,
-    title: 'Marble Ensuite & City View Suite',
+    title: 'Bespoke Joinery & Marble Suite',
     category: 'Custom Fit-out',
-    image: '/images/portfolio-extra-1.jpg',
+    image: '/images/IMG-20250805-WA0121.jpg',
     location: 'DIFC, Dubai',
     span: 'normal',
   },
@@ -75,30 +75,12 @@ function ProjectCard({ item, onClick, delay = 0 }) {
             e.target.src = '/images/IMG-20250805-WA0140.jpg';
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-        {/* Category pill */}
-        <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-[#1C120E]/75 backdrop-blur-sm text-[#C9A15D] text-[9px] uppercase font-medium tracking-[0.3em] border border-[#C9A15D]/30">
-            {item.category}
-          </span>
-        </div>
 
         {/* Hover arrow */}
         <div className="absolute top-4 right-4 w-8 h-8 bg-[#C9A15D] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M2 10L10 2M10 2H4M10 2V8" stroke="#1C120E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        </div>
-
-        {/* Caption */}
-        <div className="absolute bottom-0 left-0 right-0 p-5">
-          <div className="text-[9px] text-[#C9A15D] uppercase tracking-[0.35em] font-medium mb-1.5">
-            {item.location}
-          </div>
-          <h3 className="font-serif text-lg md:text-xl font-extralight text-white tracking-tight leading-tight">
-            {item.title}
-          </h3>
         </div>
       </div>
     </motion.div>
@@ -114,7 +96,7 @@ export default function MasterySection({ onContactClick }) {
     : galleryItems.filter((i) => i.category === selectedCat);
 
   return (
-    <section className="py-24 md:py-32 bg-[#1C120E] text-[#D9C7B1] relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#FAFAFA] text-[#1C120E] relative overflow-hidden">
       {/* Subtle background texture */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.025]"
         style={{
@@ -128,14 +110,14 @@ export default function MasterySection({ onContactClick }) {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="flex items-center justify-center gap-3 mb-5">
             <span className="w-8 h-px bg-[#C9A15D]/50" />
-            <span className="text-[10px] uppercase tracking-[0.45em] text-[#C9A15D] font-light">Portfolio Showcase</span>
+            <span className="text-xs md:text-sm uppercase tracking-[0.45em] text-[#C9A15D] font-bold">Portfolio Showcase</span>
             <span className="w-8 h-px bg-[#C9A15D]/50" />
           </div>
-          <h2 className="font-serif text-4xl md:text-6xl text-[#D9C7B1] leading-[1.08] font-extralight tracking-tight mb-4">
+          <h2 className="font-serif text-4xl md:text-6xl text-[#1C120E] leading-[1.08] font-light tracking-tight mb-4">
             The Mediums <br />
             <span className="font-light italic text-[#C9A15D]">Our Mastery</span>
           </h2>
-          <p className="text-sm md:text-base text-[#D9C7B1]/60 font-light max-w-xl mx-auto tracking-wide leading-relaxed">
+          <p className="text-sm md:text-base text-[#5E524A] font-normal max-w-xl mx-auto tracking-wide leading-relaxed">
             Explore our curated portfolio of bespoke interior transformations, structural fit-outs, and architectural outdoor spaces across Dubai.
           </p>
         </div>
@@ -148,10 +130,10 @@ export default function MasterySection({ onContactClick }) {
               <button
                 key={cat}
                 onClick={() => setSelectedCat(cat)}
-                className={`px-5 py-2 text-[10px] font-medium uppercase tracking-[0.25em] transition-all duration-300 border ${
+                className={`px-5 py-2 text-[10px] font-semibold uppercase tracking-[0.25em] transition-all duration-300 rounded-full border ${
                   isActive
-                    ? 'bg-[#C9A15D] text-[#1C120E] border-[#C9A15D]'
-                    : 'bg-transparent text-[#D9C7B1]/55 border-white/15 hover:border-[#C9A15D]/50 hover:text-[#D9C7B1]'
+                    ? 'bg-[#C9A15D] text-white border-[#C9A15D] shadow-sm'
+                    : 'bg-white text-[#1C120E]/70 border-[#1C120E]/20 hover:border-[#C9A15D] hover:text-[#1C120E]'
                 }`}
               >
                 {cat}
