@@ -63,7 +63,7 @@ export default function HomePage() {
             marginBottom: '16px',
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6)',
           }}>
-            BKD Contracting.
+            BKD Contracting
           </h1>
 
           {/* Sub Headline — Delivering Lasting Value */}
